@@ -6,8 +6,8 @@
 
 % Light data
 load('/Users/lara/Library/CloudStorage/OneDrive-Stanford/Research/Projects/Light Circadian/Data/Preprocessed/subsetData_20241003.mat')
-%fT = readtable('/Users/lara/Library/CloudStorage/OneDrive-Stanford/Research/Projects/Light Circadian/Data/fpca output (1).xlsx');
-load('/Users/lara/Library/CloudStorage/OneDrive-Stanford/Research/Projects/Light Circadian/Code/TT_forCorr.mat')
+%fT = readtable('/Users/lara/Library/CloudStorage/OneDrive-Stanford/Research/Projects/Light Circadian/Data/FPCA/fpca output (1).xlsx');
+load('/Users/lara/Library/CloudStorage/OneDrive-Stanford/Research/Projects/Light Circadian/Data/FPCA/TT_forCorr_fPCAResults.mat');
 
 %%
 
