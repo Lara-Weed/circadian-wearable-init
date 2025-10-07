@@ -266,16 +266,16 @@ end
 linkaxes(ax,'x');
 
 
-%% Scatter with all days
+%% Scatter Plots for Supplement
 
 % Define x-axis (assuming 45 days)
 x = 1:45;
 
 Metrics = fields(TT);
-
 for jj = 7:length(Metrics)
-    figure
-    ax(1) = subplot(1,2,1);
+
+   figure(1)
+    ax(1) = subplot(3,4,jj-6);
     hold on
     
     metric = TT.(Metrics{jj});
@@ -284,9 +284,9 @@ for jj = 7:length(Metrics)
     RS_ind(uSubs<=56) = true;
 
     % Group 1: black line
-    plot(metric(RS_ind,14),TT.RMSE(RS_ind,14),'ro')
+    plot(metric(RS_ind,14),TT.RMSE(RS_ind,14),'ko')
     hold on
-    plot(metric(~RS_ind,14),TT.RMSE(~RS_ind,14),'ko')
+    plot(metric(~RS_ind,14),TT.RMSE(~RS_ind,14),'ro')
     
     % Labels and grid
     xlabel(Metrics{jj})
@@ -295,12 +295,12 @@ for jj = 7:length(Metrics)
 
     grid on
 
-    legend({ 'RS', 'SW'},'Location','best')
+    %legend({ 'RS', 'SW'},'Location','best')
 
     set(gca,'fontweight','bold','fontsize',12)
 
-  
-    ax(2) = subplot(1,2,2);
+    figure(2)
+    ax(2) = subplot(3,4,jj-6);
     hold on
     
     metric = TT.(Metrics{jj});
@@ -309,9 +309,9 @@ for jj = 7:length(Metrics)
     RS_ind(uSubs<=56) = true;
 
     % Group 1: black line
-    plot(metric(RS_ind,14),TT.Entropy(RS_ind,14),'ro')
+    plot(metric(RS_ind,14),TT.Entropy(RS_ind,14),'ko')
     hold on
-    plot(metric(~RS_ind,14),TT.Entropy(~RS_ind,14),'ko')
+    plot(metric(~RS_ind,14),TT.Entropy(~RS_ind,14),'ro')
     
     % Labels and grid
     xlabel(Metrics{jj})
@@ -462,4 +462,68 @@ end
 hold off
 
 set(gca, 'fontweight','bold','fontsize',14)
+
+%% Scatter RMSE only
+%% Scatter with all days
+
+% Define x-axis (assuming 45 days)
+x = 1:45;
+
+Metrics = fields(TT);
+figure
+for jj = [1:5, 7, 8] + 6
+
+    ind2 = [1,2,3,4,5,0,6,7];
+
+    ax(1) = subplot(4,2,ind2(jj-6));
+    hold on
+    
+    metric = TT.(Metrics{jj});
+    
+    RS_ind = false(length(uSubs),1);
+    RS_ind(uSubs<=56) = true;
+
+    % Group 1: black line
+    plot(metric(:,14),TT.RMSE(:,14),'ko')
+    % plot(metric(RS_ind,14),TT.RMSE(RS_ind,14),'ko')
+    % hold on
+    % plot(metric(~RS_ind,14),TT.RMSE(~RS_ind,14),'ro')
+    
+    % Labels and grid
+    xlabel(Metrics{jj})
+    
+    ylabel('RMSE')
+
+    grid on
+
+    %legend({ 'RS', 'SW'},'Location','best')
+
+    set(gca,'fontweight','bold','fontsize',12)
+
+  
+    % ax(2) = subplot(1,2,2);
+    % hold on
+    % 
+    % metric = TT.(Metrics{jj});
+    % 
+    % RS_ind = false(length(uSubs),1);
+    % RS_ind(uSubs<=56) = true;
+    % 
+    % % Group 1: black line
+    % plot(metric(RS_ind,14),TT.Entropy(RS_ind,14),'ko')
+    % hold on
+    % plot(metric(~RS_ind,14),TT.Entropy(~RS_ind,14),'ro')
+    % 
+    % % Labels and grid
+    % xlabel(Metrics{jj})
+    % 
+    % ylabel('Entropy')
+    % 
+    % grid on
+    % set(gca,'fontweight','bold','fontsize',12)
+    % 
+    % linkaxes(ax,'x');
+end
+
+
 
