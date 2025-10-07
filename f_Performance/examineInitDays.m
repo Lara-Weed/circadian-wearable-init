@@ -49,7 +49,8 @@ for i = 1:length(fn)
     T.DLMOrel(T.DLMOrel>12) = T.DLMOrel(T.DLMOrel>12) - 24; 
     T.DLMOrel(T.DLMOrel<-12) = T.DLMOrel(T.DLMOrel<-12) + 24; 
 
-    for j = 1:length(uDays)
+    tt1 = nan(length(uDays),9);
+    parfor j = 1:length(uDays)
         [f1,xf1] = kde(T.DLMOrel(T.DayfromDLMO == uDays(j)),"EvaluationPoints",linspace(-12,12,97));
         [f2,xf2] = kde(T.DLMOrel(T.DayfromDLMO == uDays(j)));
         NLL = -log(f1(xf1 == 0)./(sum(f1)) + 10e-6);
@@ -59,9 +60,9 @@ for i = 1:length(fn)
         
         Mu = 24*mu./(2*pi);
 
-        tt = [tt;i,uDays(j),length(T.DLMOrel(T.DayfromDLMO == uDays(j))),NLL,MLE,RMSE,Mu,K,Entropy];
+        tt1(j,:) = [i,uDays(j),length(T.DLMOrel(T.DayfromDLMO == uDays(j))),NLL,MLE,RMSE,Mu,K,Entropy];
     end
-
+    tt = [tt;tt1];
 end
 
 
