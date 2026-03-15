@@ -1,8 +1,8 @@
 Code for
 
-Weed L, Jamgochian A, St. Hilaire MA, Cheng P, Kochenderfer MJ, Zeitzer JM. Circadian Phase Estimation From Ambulatory Wearables With Particle Filtering: Accuracy Depends on Initialization, Recording Duration, and Light Exposure. *Journal of Biological Rhythms*. 2025;0(0). doi:10.1177/07487304251392289
+Weed L, Jamgochian A, St. Hilaire MA, Cheng P, Kochenderfer MJ, Zeitzer JM. Circadian Phase Estimation From Ambulatory Wearables With Particle Filtering: Accuracy Depends on Initialization, Recording Duration, and Light Exposure. Journal of Biological Rhythms. 2026;41(1):42-52. doi:10.1177/07487304251392289
   
-
+  
 ### Overview
 This repository contains scripts to preprocess wearable data, compute light diet characteristics, run circadian light-response models, and evaluate estimation performance. The workflow is primarily MATLAB, with supporting R code for FPCA.
 
