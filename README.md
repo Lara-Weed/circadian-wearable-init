@@ -23,12 +23,19 @@ This repository contains scripts to preprocess wearable data, compute light diet
 ### Citation
 If you use this code, please cite the paper above. Placeholder BibTeX:
 ```bibtex
-@article{Weed2025Circadian,
-  title = {Circadian phase estimation from ambulatory wearables with particle filtering: accuracy depends on initialization, recording duration, and light exposure},
-  author = {Weed, Lara and Jamgochian, Arec and St. Hilaire, Melissa A. and Cheng, Philip and Kochenderfer, Mykel J. and Zeitzer, Jamie M.},
-  year = {2025},
-  journal = {Journal of Biological Rhythms},
-  doi = {10.1177/07487304251392289},
-  notes = {In Press as of 7 Oct 2025, Online as of 4 Dec 2025}
+
+@article{Weed2026_Circadian,
+   author = {Weed,  Lara and Jamgochian,  Arec and St. Hilaire,  Melissa A. and Cheng,  Philip and Kochenderfer,  Mykel J. and Zeitzer,  Jamie M.},
+   title = {Circadian Phase Estimation From Ambulatory Wearables With Particle Filtering: Accuracy Depends on Initialization, Recording Duration, and Light Exposure},
+   journal = {Journal of Biological Rhythms},
+   volume = {41},
+   number = {1},
+   pages = {42-52},
+   ISSN = {0748-7304},
+   DOI = {10.1177/07487304251392289},
+   url = {https://doi.org/10.1177/07487304251392289},
+   year = {2026},
+   type = {Journal Article}
 }
+
 
