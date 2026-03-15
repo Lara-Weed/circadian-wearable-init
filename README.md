@@ -21,7 +21,6 @@ This repository contains scripts to preprocess wearable data, compute light diet
   - `calcIVIS.m`, `DLMODistributions.m`, `estimateVonMisesParamsWithEntropy.m`, `examineInitDays.m`, `examineInits_14Days.m`, `extractTinitDays.m`, `lightDietCorrelations.m`, `LinsBias.m`
 
 ### Citation
-If you use this code, please cite the paper above. Placeholder BibTeX:
 ```bibtex
 
 @article{Weed2026_Circadian,
